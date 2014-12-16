@@ -1,0 +1,487 @@
+﻿<!DOCTYPE html>
+<html>
+     <head>
+          <title>Principal</title>
+        <link href="css/jquery.mobile.theme-1.0.min.css" rel="stylesheet" type="text/css"/>
+<link href="css/jquery.mobile.structure-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="phonegap.js"></script>
+<script src="js/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="js/jquery.mobile-1.0.min.js" type="text/javascript">
+</script>
+ <style>
+  #titulo{
+ color: orange;
+    text-align: center;
+}
+
+  #titulo1{
+ color: red;
+    text-align: center;
+}
+
+
+</style>
+
+     </head>
+<body>
+     <div data-role="page" id="principal" data-theme="a">
+
+      <div data-role="header">
+            <h1>Elementos de formulario</h1>
+      </div>
+<div data-role="footer" class="ui-bar">
+	<a href="#secundaria" data-role="button" data-icon="plus">SE</a>
+	<a href="#slideup" data-role="button" data-icon="arrow-u">Up</a>
+	<a href="#pop" data-role="button" data-icon="arrow-d">Down</a>
+
+</div>
+     <div data-role="footer" data-id="foo1" data-position="fixed">
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#info">Investigacion</a></li>
+                        <li><a href="#secundaria">investigacion2</a></li>
+                        <li><a href="#Ejemplo">Ejemplo</a></li>
+			
+			
+			
+		</ul>
+	</div><!-- /navbar -->
+</div><!-- /footer -->
+            <p><div data-role="content">
+            <h1>Layout</h1>
+<div class="ui-grid-b">
+			<div class="ui-block-a"><div class="ui-bar ui-bar-e" style="height:120px">Block A</div></div>
+			<div class="ui-block-b"><div class="ui-bar ui-bar-e" style="height:120px">Block B</div></div>
+			<div class="ui-block-c"><div class="ui-bar ui-bar-e" style="height:120px">Block C</div></div>
+		</div><!-- /grid-b -->
+		
+		
+
+		<fieldset class="ui-grid-b">
+			<div class="ui-block-a"><button type="submit" data-theme="c">Hmm</button></div>
+			<div class="ui-block-b"><button type="submit" data-theme="a">No</button></div>	 
+			<div class="ui-block-c"><button type="submit" data-theme="b">si</button></div>  
+		</fieldset>
+
+
+  
+  </div>
+               
+                 
+            </p>
+     </div>
+           <div data-role="footer">
+                 <h4>Pie de pagina</h4>
+           </div>
+
+</div>
+______________________________________________________________________________________________________________________________________________
+     <div data-role="page" id="secundaria">
+      <div data-role="header">
+            <div class="ui-bar ui-bar-b">
+	<h3><a href="#principal" data-role="button" data-mini="true">regresar</a></h3>
+</div>
+			
+      </div>
+      <div data-role="content">
+
+<div id="titulo1"><h1>Slider</h1></div>
+Para agregar un widget slider a su página, utilizar un estándar de entrada con el type = "range" atributo. La entrada de valor se utiliza para configurar la posición inicial de la manija y el valor se rellena en la entrada de texto. Especifique min y max valores de atributos para establecer el alcance del control deslizante. Si desea restringir la entrada a incrementos específicos, agregue el paso atributo. Establezca el valor del atributo para definir el valor inicial. El marco analizará estos atributos para configurar el widget slider. Ver la referencia-atributo de datos para ver todos los atributos posibles que puede añadir a los deslizadores.<br>
+
+Al arrastrar la manija de la barra deslizante, el marco se actualizará el valor de la entrada nativa (y viceversa) por lo que siempre están en sincronía; esto asegura que el valor se envía con el formulario.<br>
+
+Establezca el de atributo de la etiqueta para que coincida con el ID de la entrada para que se asocian semánticamente. Es posible ocultar accesible la etiqueta si no se desea en el diseño de la página, pero le exigimos que está presente en el marcado por razones semánticas y de accesibilidad.<br>
+
+El marco encontrará todos los insumos elementos con un type = "range" y automáticamente mejorarlas en un slider con una entrada de acompañante sin necesidad de aplicar un data-role atributo. Para evitar que la mejora automática de esta entrada en un control deslizante, añada data-role = "none" atributo a la entrada y se envuelven en un div con el data-role = "fieldcontain" atributo para agruparlos. En este ejemplo, el rango aceptable es de 0-100.
+
+
+<Label for="slider-1"> regulador de entrada: </ label>
+<input type="range" name="slider-1" id="slider-1" value="60" min="0" max="100" />     
+
+<div id="titulo1"><h1>Check box y Radio button</h1></div>
+
+Los botones de radio
+
+Los botones de radio se utilizan para proporcionar una lista de opciones en las que un solo elemento puede ser seleccionado. Tradicionales botones de opción de escritorio no están optimizados para la entrada táctil de modo estilos jQuery Mobile la etiqueta de los botones de radio por lo que son más grandes y parecen hacer clic. Un conjunto personalizado de iconos se agregan a la etiqueta para proporcionar información visual adicional.
+
+Los mandos de la radio debajo de uso estándar de entrada / etiqueta de marcado, pero son de estilo para ser más agradable toque. El control con estilo que se ve es en realidad el elemento label, que se encuentra sobre la entrada real, por lo que si las imágenes no se cargan, todavía tendrá un control funcional. En la mayoría de los navegadores, haciendo clic en la etiqueta de forma automática desencadena un clic en la entrada, pero hemos tenido que activar la actualización de forma manual durante algunos navegadores móviles que no hacen esto de forma nativa. En el escritorio, estos controles son el teclado y el lector de pantalla accesible. Ver la referencia-atributo de datos para ver todos los atributos posibles que se pueden agregar a los botones de radio.
+
+Botones de opción agrupados verticalmente
+Para crear un conjunto de botones de opción, añada una entrada con un type = "radio" de atributo y su correspondiente etiqueta . Establezca el de atributo de la etiqueta para que coincida con el ID de la entrada para que se asocian semánticamente.
+
+La etiqueta se muestra el elemento al lado del elemento de formulario radio. Envuelva los botones de opción en un fieldset elemento que tiene una leyenda que actúa como el título de la pregunta.
+
+Para integrar visualmente varios botones de opción en un conjunto de botones agrupados verticalmente, el marco se eliminará automáticamente todos los márgenes entre los botones y vuelta Solo la parte superior y las esquinas inferiores del conjunto si hay un data-role = "controlgroup" atributo en el envase.
+
+<h1>Check box</h1>	
+Las casillas de verificación se utilizan para proporcionar una lista de opciones en las que más de uno puede ser seleccionado. Casillas de escritorio tradicionales no están optimizados para la entrada táctil por lo que en jQuery Mobile, que el estilo de la etiqueta de las casillas por lo que son más grandes y esperamos hacer clic. Un conjunto personalizado de iconos se agregan a la etiqueta para proporcionar información visual adicional.
+
+La casilla de verificación controla abajo uso estándar de entrada / etiqueta de marcado, pero se ha adaptado para ser más agradable toque. El control con estilo que se ve es en realidad el elemento label, que se encuentra sobre la entrada real, por lo que si las imágenes no se cargan, todavía tendrá un control funcional. En la mayoría de los navegadores, haciendo clic en la etiqueta de forma automática desencadena un clic en la entrada, pero hemos tenido que activar la actualización de forma manual durante algunos navegadores móviles que no hacen esto de forma nativa. En el escritorio, estos controles son el teclado y el lector de pantalla accesible. Ver la referencia-atributo de datos para ver todos los atributos posibles que se pueden agregar a las casillas de verificación.
+
+Para crear una sola casilla, añada una entrada con un type = "checkbox" atributo y su correspondiente etiqueta . Si la entrada no está envuelto en su correspondiente etiqueta , asegúrese de establecer la de atributo de la etiqueta para que coincida con el ID de la entrada por lo que son semánticamente asociados.
+
+Hay, pues, dos formas de crear una casilla de verificación y con una etiqueta como se muestra a continuación:
+
+	
+<label> <input type="checkbox" name="checkbox-0" /> Estoy de acuerdo </ label>
+			
+<input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" />
+<label for="checkbox-1"> Estoy de acuerdo </ label>
+
+
+
+
+
+         	
+			</div>
+</form>
+  </div>
+           <div data-role="footer">
+                 <h4>Pie de pagina</h4>
+           </div>
+     </div>
+</body>
+</html>
+
+
+
+________________________________________________
+
+_____________________________________________________
+<div data-role="page" id="info">
+      <div data-role="header">
+ <div class="ui-bar ui-bar-b">
+	<h3><a href="#principal" data-role="button" data-mini="true">regresar</a></h3>
+</div>
+            <h1>Investigacion</h1>
+      </div>
+      <div data-role="content">
+
+<div id="titulo"><h1>Los elementos del formulario</h1></div>
+Esta página contiene varios impulsados ​​controles de formulario-mejora progresiva. Elementos nativos a veces se oculta a la vista, pero sus valores se mantienen por lo que el formulario puede ser presentado con normalidad. Los navegadores que no soportan los controles personalizados seguirán ofrecer una experiencia útil, porque todos se basan en elementos de forma nativa.
+
+Hay un conjunto completo de tamaño mini elementos de formulario que son útiles para las barras de herramientas o espacios estrechos. Comparar Mini y normales elementos de formulario de lado a lado.
+
+<div id="titulo1"><h1>Entradas y áreas de texto de texto</h1></div>
+Entradas de texto
+Para recopilar texto alfanumérico estándar, utilice una entrada con un type = "text" atributo. Establezca el de atributo de la etiqueta para que coincida con el ID de la entrada para que se asocian semánticamente. Es posible ocultar accesible la etiqueta si no se desea en el diseño de la página, pero le exigimos que está presente en el marcado por razones semánticas y de accesibilidad.<br>
+
+	
+    <label for="basic"> Entrada de texto: </label><br>
+    <input type="text" name="nombre" id="basic" value="" ><br>
+Esto producirá una entrada de texto básico. Los estilos predeterminados establecen el ancho de la entrada al 100% del contenedor primario y apilar la etiqueta en una línea separada.
+
+<div id="titulo1"><h1>Text area</h1></div>
+Textareas
+Para las entradas de texto de múltiples líneas, utilice un área de texto del elemento. El marco de referencia de crecimiento automático de la altura del área de texto para evitar la necesidad de una barra de desplazamiento interno.
+
+Establezca el de atributo de la etiqueta para que coincida con el ID de la caja de texto para que se asocian semánticamente, y se envuelven en un div con el data-role = "fieldcontain" atributo para agruparlos.<br>
+
+	
+ <label for="basic">Text Input:</label>
+    <input type="text" name="name" id="basic" value=""  />
+Soy un área de texto básico. Si esto se rellena previamente con el contenido, la altura se ajustará automáticamente para adaptarse sin necesidad de desplazarse. Esa es una característica bastante útil usabilidad.<br>
+ Textarea<br>
+Esto producirá un área de texto básico con el ancho establecido en 100% del contenedor primario y la etiqueta apilada en una línea separada. El textarea crecerá para adaptarse a las nuevas líneas a medida que escribe
+
+<div id="titulo1"><h1>Campos de busqueda</h1></div>
+Insumos de búsqueda son un nuevo tipo HTML con el estilo con las esquinas en forma de píldora y agrega un icono "x" para borrar el campo una vez que comience a escribir. Comience con una entrada con un type = "search" atributo en su margen de beneficio. Ver la referencia-atributo de datos para ver todos los atributos posibles que se pueden agregar para buscar entradas.<br>
+
+Establezca el de atributo de la etiqueta para que coincida con el ID de la entrada para que se asocian semánticamente. Es posible ocultar accesible la etiqueta si no se desea en el diseño de la página, pero le exigimos que está presente en el marcado por razones semánticas y de accesibilidad.<br>
+
+	
+<label for="search-basic"> Buscar entrada: </ label>
+<input type="search" nombre="buscar" id="searc-basic" value="" /><br>
+Esto producirá una entrada de búsqueda básica. Los estilos predeterminados establecen el ancho de la entrada al 100% del contenedor primario y apilar la etiqueta en una línea separada.
+
+<div id="titulo1"><h1>Flip togle</h1></div>
+Interruptor de palanca del tirón
+
+Un interruptor binario "flip" es un elemento de la interfaz de usuario común en los dispositivos móviles que se utiliza para el binario de encendido / apagado o la verdadera entrada de datos / falso. Puede arrastrar la manija del tirón como una barra de desplazamiento o toque en un lado del interruptor.<br>
+
+Para crear un toggle flip, comience con una selecta con el atributo de datos-role = "slider" y dos opciones. La primera opción será el estilo como "on" serán decoradas Detector de estado y el segundo como el estado "apagado" para escribir sus opciones en consecuencia. Ver la referencia-atributo de datos para ver todos los atributos posibles que puede añadir a la vuelta interruptores.<br>
+
+Establezca el de atributo de la etiqueta para que coincida con el ID de la entrada para que se asocian semánticamente. Es posible ocultar accesible la etiqueta si no se desea en el diseño de la página, pero le exigimos que está presente en el marcado por razones semánticas y de accesibilidad.<br>
+
+	
+<label for="flip-1"> Seleccione slider: </ label>
+<select name="flip-1" id="flip-1" data-role="slider">
+	<option value="off"> Off </ option>
+	<option value="on"> On </ option>
+</ Select> 
+
+<div id="titulo1"><h1>Menus de selecion</h1></div>
+El menú de selección se basa en un nativo seleccione el elemento, que se oculta a la vista y se reemplaza con un botón de selección personalizada de estilo que coincida con el aspecto y la sensación del framework jQuery Mobile. El menú de selección es activada-ARIA y accesible desde el teclado en el escritorio también. Ver la referencia-atributo de datos para ver todos los atributos posibles que puede añadir a las selecciones.<br>
+
+De forma predeterminada, el marco aprovecha el menú de opciones del sistema operativo nativo para usar con el botón personalizado. Cuando se hace clic en el botón, el menú OS nativo se abrirá. Cuando se selecciona un valor y el menú se cierra, el texto del botón personalizado se actualiza para que coincida con el valor seleccionado. Tenga en cuenta que el marco también ofrece la posibilidad de tener costumbre (no nativas) seleccione los menús; ver los detalles en la parte inferior de esta página y en el menú personalizado de selección de página.<br>
+
+Para agregar un menú de selección a su página, comenzar con un nivel selecto elemento poblada con un conjunto de opciones de elementos. Establezca el de atributo de la etiqueta para que coincida con la Identificación del selecto por lo que son semánticamente asociados. Es posible ocultar accesible la etiqueta si no se desea en el diseño de la página, pero le exigimos que está presente en el marcado por razones semánticas y de accesibilidad.<br>
+
+El marco encontrará todos selectos elementos y automáticamente mejorarlos en menús de selección, no hay necesidad de aplicar un data-role atributo. Para evitar que la mejora automática de una selección, añadir data-role = "none" atributo al selecto .<br>
+
+
+<label for="select-choice-0" class="select"> método del envío: </ label>
+<select name="select-choice-0" id="select-choice-0">
+   <option value="standard"> estándar: 7 días </ option>
+   <option value="rush"> Rapido: 3 días </ option>
+   <option value="express"> Express: día siguiente </ option>
+   <option value="overnight"> Noche </ option>
+</ Select>
+Esto producirá un selecto menú básico. Los estilos predeterminados establecen el ancho de la entrada al 100% del contenedor primario y pilas de la etiqueta en una línea separada.
+
+
+
+
+
+
+     </div>
+           <div data-role="footer">
+                 <h4>Pie de pagina</h4>
+           </div>
+     </div>
+_________________________________________________-_________
+<div data-role="page" id="investigacion2">
+      <div data-role="header">
+
+            <h1>pagina externa</h1>
+      </div>
+<div data-role="footer">		
+	<div data-role="navbar" data-iconpos="left"  >
+		<ul>
+			<li><a href="#">One</a></li>
+			<li><a href="#">Two</a></li>
+			<li><a href="#">Three</a></li>
+		</ul>
+	</div><!-- /navbar -->
+</div><!-- /footer -->
+	
+</div>
+      <div data-role="content">
+<div id="titulo5"><h1>Flip togle</h1></div>
+Interruptor de palanca del tirón
+
+Un interruptor binario "flip" es un elemento de la interfaz de usuario común en los dispositivos móviles que se utiliza para el binario de encendido / apagado o la verdadera entrada de datos / falso. Puede arrastrar la manija del tirón como una barra de desplazamiento o toque en un lado del interruptor.<br>
+
+Para crear un toggle flip, comience con una selecta con el atributo de datos-role = "slider" y dos opciones. La primera opción será el estilo como "on" serán decoradas Detector de estado y el segundo como el estado "apagado" para escribir sus opciones en consecuencia. Ver la referencia-atributo de datos para ver todos los atributos posibles que puede añadir a la vuelta interruptores.<br>
+
+Establezca el de atributo de la etiqueta para que coincida con el ID de la entrada para que se asocian semánticamente. Es posible ocultar accesible la etiqueta si no se desea en el diseño de la página, pero le exigimos que está presente en el marcado por razones semánticas y de accesibilidad.<br>
+
+	
+<label for="flip-1"> Seleccione slider: </ label>
+<select name="flip-1" id="flip-1" data-role="slider">
+	<option value="off"> Off </ option>
+	<option value="on"> On </ option>
+</ Select> 
+Esto producirá un insumo básico interruptor flip. Los estilos predeterminados establecen el ancho del interruptor para el 100% del contenedor primario y apilar la etiqueta en una línea separada.
+
+<Label for="slider-1"> regulador de entrada: </ label>
+<input type="range" name="slider-1" id="slider-1" value="60" min="0" max="100" />
+
+Los botones de radio
+Lo esencial
+Opciones
+Métodos
+Eventos
+Los botones de radio se utilizan para proporcionar una lista de opciones en las que un solo elemento puede ser seleccionado. Tradicionales botones de opción de escritorio no están optimizados para la entrada táctil de modo estilos jQuery Mobile la etiqueta de los botones de radio por lo que son más grandes y parecen hacer clic. Un conjunto personalizado de iconos se agregan a la etiqueta para proporcionar información visual adicional.
+
+Los mandos de la radio debajo de uso estándar de entrada / etiqueta de marcado, pero son de estilo para ser más agradable toque. El control con estilo que se ve es en realidad el elemento label, que se encuentra sobre la entrada real, por lo que si las imágenes no se cargan, todavía tendrá un control funcional. En la mayoría de los navegadores, haciendo clic en la etiqueta de forma automática desencadena un clic en la entrada, pero hemos tenido que activar la actualización de forma manual durante algunos navegadores móviles que no hacen esto de forma nativa. En el escritorio, estos controles son el teclado y el lector de pantalla accesible. Ver la referencia-atributo de datos para ver todos los atributos posibles que se pueden agregar a los botones de radio.
+
+Botones de opción agrupados verticalmente
+Para crear un conjunto de botones de opción, añada una entrada con un type = "radio" de atributo y su correspondiente etiqueta . Establezca el de atributo de la etiqueta para que coincida con el ID de la entrada para que se asocian semánticamente.
+
+La etiqueta se muestra el elemento al lado del elemento de formulario radio. Envuelva los botones de opción en un fieldset elemento que tiene una leyenda que actúa como el título de la pregunta.
+
+Para integrar visualmente varios botones de opción en un conjunto de botones agrupados verticalmente, el marco se eliminará automáticamente todos los márgenes entre los botones y vuelta Solo la parte superior y las esquinas inferiores del conjunto si hay un data-role = "controlgroup" atributo en el envase.
+
+	
+<fieldset data-role="controlgroup">
+	<legend> Elija una mascota: </ legend>
+     	<input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
+     	<label Cat for="radio-choice-1"> </ label>
+
+     	<input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2" />
+     	<label for="radio-choice-2"> Dog </ label>
+
+     	<input type="radio" name="radio-choice" id="radio-choice-3" value="choice-3" />
+     	<label for="radio-choice-3"> Hamster </ label>
+
+     	<input type="radio" name="radio-choice" id="radio-choice-4" value="choice-4" />
+     	<label for="radio-choice-4"> lagartija </ label>
+</ Fieldset>
+
+
+
+
+
+     </div>
+           <div data-role="footer">
+                 <h4>Pie de pagina</h4>
+           </div>
+     </div>
+_________________________________________________________:____
+<div data-role="page" id="Ejemplo" data-theme="a">
+      <div data-role="header">
+            <h1>pagina externa</h1>
+      </div>
+      <div data-role="content">
+
+_____________________________
+<FORM>
+<div><button class="ui-btn ui-icon-refresh ui-btn-icon-left">Refresh Page</button></div>
+<div data-role="fieldcontain">
+	         <label for="name">Text Input:</label>
+	         <input type="text" name="name" id="name" value=""  />
+			</div>
+
+			<div data-role="fieldcontain">
+			<label for="textarea">Textarea:</label>
+			<textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+			</div>
+
+			<div data-role="fieldcontain">
+	         <label for="search">Campos de busqueda:</label>
+	         <input type="search" name="password" id="search" value=""  />
+			</div>
+
+			<div data-role="fieldcontain">
+				<label for="slider2">Flip toogle:</label>
+				<select name="slider2" id="slider2" data-role="slider">
+					<option value="off">Off</option>
+					<option value="on">On</option>
+				</select>
+			</div>
+<div>
+<label for="flip-mini">Flip switch:</label>
+<select name="flip-mini" id="flip-mini" data-role="slider" data-mini="true">
+	<option value="off">Off</option>
+	<option value="on">On</option>
+</select>
+
+</div>			
+                        <div data-role="fieldcontain">
+				<label for="slider">Slider:</label>
+			 	<input type="range" name="slider" id="slider" value="50" min="0" max="100" data-highlight="true"  />
+			</div>
+
+			<div data-role="fieldcontain">
+			<fieldset data-role="controlgroup">
+                                <legend>check Box</legend> 
+				<legend>QUE BOTANA TE GUSTA MAS:</legend>
+				<input type="checkbox" name="checkbox-1a" id="checkbox-1a" class="custom" />
+				<label for="checkbox-1a">Cheetos</label>
+
+				<input type="checkbox" name="checkbox-2a" id="checkbox-2a" class="custom" />
+				<label for="checkbox-2a">Doritos</label>
+
+				<input type="checkbox" name="checkbox-3a" id="checkbox-3a" class="custom" />
+				<label for="checkbox-3a">Fritos</label>
+
+				<input type="checkbox" name="checkbox-4a" id="checkbox-4a" class="custom" />
+				<label for="checkbox-4a">PAPAS</label>
+		    </fieldset>
+			</div>
+
+			<div data-role="fieldcontain">
+			<fieldset data-role="controlgroup" data-type="horizontal">
+		    	<legend>Font styling:</legend>
+		    	<input type="checkbox" name="checkbox-6" id="checkbox-6" class="custom" />
+				<label for="checkbox-6">b</label>
+
+				<input type="checkbox" name="checkbox-7" id="checkbox-7" class="custom" />
+				<label for="checkbox-7"><em>i</em></label>
+
+				<input type="checkbox" name="checkbox-8" id="checkbox-8" class="custom" />
+				<label for="checkbox-8">u</label>
+		    </fieldset>
+			</div>
+
+			<div data-role="fieldcontain">
+			    <fieldset data-role="controlgroup">
+                                <legend>Radio Button</lengend>
+			    	<legend>SELECIONA UNA MASCOTA:</legend>
+			         	<input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="checked" />
+			         	<label for="radio-choice-1">GATO</label>
+
+			         	<input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2"  />
+			         	<label for="radio-choice-2">PERRO</label>
+
+			         	<input type="radio" name="radio-choice-1" id="radio-choice-3" value="choice-3"  />
+			         	<label for="radio-choice-3">Hamster</label>
+
+			         	<input type="radio" name="radio-choice-1" id="radio-choice-4" value="choice-4"  />
+			         	<label for="radio-choice-4">SURICATO</label>
+			    </fieldset>
+			</div>
+
+			<div data-role="fieldcontain">
+			    <fieldset data-role="controlgroup" data-type="horizontal">
+			     	<legend>Layout view:</legend>
+			         	<input type="radio" name="radio-choice-b" id="radio-choice-c" value="on" checked="checked" />
+			         	<label for="radio-choice-c">List</label>
+			         	<input type="radio" name="radio-choice-b" id="radio-choice-d" value="off" />
+			         	<label for="radio-choice-d">Grid</label>
+			         	<input type="radio" name="radio-choice-b" id="radio-choice-e" value="other" />
+			         	<label for="radio-choice-e">Gallery</label>
+			    </fieldset>
+			</div>
+
+			<div data-role="fieldcontain">
+				<label for="select-choice-1" class="select">CADA CUANTO VAS A CASA:</label>
+				<select name="select-choice-1" id="select-choice-1">
+					<option value="standard">TODOS LOS DIAS </option>
+					<option value="rush">CADA FIN DE SEMANA</option>
+					<option value="express">UNA VEZ POR MES </option>
+					
+				</select>
+			</div>
+
+			<div data-role="fieldcontain">
+				<label for="select-choice-3" class="select">tu ingenieria:</label>
+				<select name="select-choice-3" id="select-choice-3">
+					<option value="AL">Isc</option>
+					<option value="AK">IIA</option>
+					<option value="AZ">IE</option>
+					<option value="AR">II</option>
+					<option value="CA">IGE</option>
+					
+				
+				</select>
+
+			</div>
+
+			<div data-role="fieldcontain">
+				<label for="select-choice-a" class="select">QUE TIPO DE ENSEÑANSA ERES</label>
+				<select name="select-choice-a" id="select-choice-a" data-native-menu="false">
+					<option>EJEMPLO</option>
+					<option value="standard">eSCOLARISADO</option>
+					<option value="rush">SABATINO</option>				
+			</div>
+
+                    
+
+		<div class="ui-body ui-body-b">
+		<fieldset class="ui-grid-a">
+				<div class="ui-block-a"><button type="submit" data-theme="d">Cancel</button></div>
+				<div class="ui-block-b"><button type="submit" data-theme="a">ENVIAR</button></div>
+	    </fieldset>
+		</div>
+	</form>
+
+
+_____________________________
+
+_________________________________________________________________
+<div data-role="page" id="fade">
+      <div data-role="header">
+            <h1>pagina externa</h1>
+      </div>
+      <div data-role="content">
+<a href="https://www.google.com.mx" target="_blank">Enlace</a>
+
+     </div>
+           <div data-role="footer">
+                 <h4>Pie de pagina</h4>
+           </div>
+     </div>
+________________________________________________
+
